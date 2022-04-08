@@ -1,4 +1,4 @@
-import {constants} from "../../Constants/constants";
+import {constants} from "../../Constants";
 
 export const postService = {
 
