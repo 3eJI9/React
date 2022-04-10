@@ -6,10 +6,14 @@ const App = () => {
         <div>
             <div className={'users_posts'}>
             <Users/>
-            <Posts/>
+            <div className={'posts'}>
+                <Posts/>
             </div>
+            </div>
+            <div className={'comments'}>
             <Comments/>
-        </div>
+            </div>
+            </div>
     );
 
 }
