@@ -14,7 +14,7 @@ import {Post} from "../Post/Post";
     return (
         <div>
             {
-                posts && posts.map((post) => < Post key={post.id} user={post}/>)
+                posts && posts.map((post) => < Post key={post.id} post={post}/>)
             }
         </div>
     );

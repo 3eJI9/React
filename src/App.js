@@ -1,7 +1,7 @@
 import './App.css'
 import {Comments, Posts, Users} from './components'
 
-export const app = () => {
+const App = () => {
     return (
         <div>
             <div className={'users_posts'}>
@@ -14,5 +14,4 @@ export const app = () => {
 
 }
 
-export class App {
-}
+export default App
