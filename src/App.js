@@ -8,8 +8,10 @@ const App = () => {
             <Users/>
             <Posts/>
             </div>
+            <div className={'comments'}>
             <Comments/>
-        </div>
+            </div>
+            </div>
     );
 
 }
