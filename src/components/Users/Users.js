@@ -2,11 +2,11 @@ import {useEffect, useState} from "react";
 import {usersService} from "../../services/users.services";
 import {User} from "../User/User";
 
-export const users = () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
+export const Users = () => {
+
     const [users,setUsers] = useState(null)
 
-    // eslint-disable-next-line react-hooks/rules-of-hooks
+
     useEffect(() =>{
     usersService.getAll().then(({data}) => setUsers(data))
     }, []  );
@@ -15,7 +15,7 @@ export const users = () => {
 
     return (
     <div>
-        {users.map((user) => <User ke user={user}/>)}
+        {users && users.map((user) => <User key={user.id} user={user}/>)}
 
     </div>
 );
