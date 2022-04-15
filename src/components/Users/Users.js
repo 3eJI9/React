@@ -1,20 +1,22 @@
-import { useEffect, useState } from "react";
-import {userService} from "../services";
-import { User } from '../User/User'
+import {useEffect, useState} from "react";
+import {usersService} from "../../services/users.services";
+import {User} from "../User/User";
 
-    export const Users = () => {
-    const [users, setUsers] = useState(null )
+export const users = () => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const [users,setUsers] = useState(null)
 
-        useEffect(() => {
-            userService.getAllUsers().then(value => setUsers(value));
-        }, []);
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    useEffect(() =>{
+    usersService.getAll().then(({data}) => setUsers(data))
+    }, []  );
+
 
 
     return (
-        <div>
-            {
-                users && users.map((user) => <User key={user.id} user={user}/>)
-            }
-        </div>
-    );
+    <div>
+        {users.map((user) => <User ke user={user}/>)}
+
+    </div>
+);
 }
