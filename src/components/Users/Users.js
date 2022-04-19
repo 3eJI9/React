@@ -1,8 +1,9 @@
 import {useEffect, useState} from "react";
-import {usersService} from "../../services/users.services";
-import {User} from "../User/User";
+import {usersService} from '../../services/';
+import {User} from '../User/User';
 
-export const Users = () => {
+
+export const Users = ({setUser, setUserIdForPosts}) => {
 
     const [users,setUsers] = useState(null)
 
@@ -12,10 +13,12 @@ export const Users = () => {
     }, []  );
 
 
-
     return (
     <div>
-        {users && users.map((user) => <User key={user.id} user={user}/>)}
+        {users && users.map((user) => <User key={user.id}
+                                            user={user}
+                                            setUser={setUser}
+                                            setUserIdForPosts={setUserIdForPosts}/>)}
 
     </div>
 );
