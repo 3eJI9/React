@@ -1,4 +1,4 @@
-import  styles from 'App.module.css';
+import  styles from './App.module.css';
 
 import {UserInfo, Users, Posts} from './components/';
 
@@ -16,7 +16,7 @@ export const App = () => {
             <div>
                 <div className={styles.usersAndInfo}>
                 <Users setUser={setUser} setUserIdForPosts={setUserIdForPosts}/>
-                {user && <UserInfo user={user} setuserIdForPosts={setUserIdForPosts}/>}
+                {user && <UserInfo user={user} setUserIdForPosts={setUserIdForPosts}/>}
                 </div>
                 {userIdForPosts && <Posts userId={setUserIdForPosts}/>}
             </div>
