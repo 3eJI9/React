@@ -3,12 +3,18 @@ import {carService} from "../../services";
 import {Car} from "../car/car";
 
 
-const Cars = () => {
+const Cars = ({newCar}) => {
   const [cars, setCars] = useState([])
 
     useEffect(() => {
       carService.getAll().then(({data})=>setCars(data))
     },[] )
+
+    useEffect (() => {
+      if (newCar) {
+        setCars([...cars,newCar])
+      }
+    },   [newCar]);
 
     return(
         <div>
