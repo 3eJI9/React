@@ -1,0 +1,17 @@
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn1 {
+    border-radius: 10px;
+    background-color:#0a0a23;
+    color: #fff;
+    width: 100px;
+    margin: 20px;
+}
+
+.bg {
+    background-color: #b9d9d2;
+}
